@@ -1,0 +1,9 @@
+<div *ngIf="this.popUp" class="popup" [style.display]="showPopUp ? 'block' : 'none'">
+  <div class="popup__content">
+    <h2 id="heading">{{ this.popUp.title }}</h2>
+    <p id="text">
+      {{ this.popUp.text }}
+    </p>
+    <button id="closeBtn" (click)="showPopUp = false">Got it!</button>
+  </div>
+</div>

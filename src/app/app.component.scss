@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.game-container {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-container {
+  width: 100%;
+  height: 300px;
+}
+
+.stats-container {
+  width: max-content;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 810px) {
+  .top {
+    flex-direction: column;
+  }
+
+  .game-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .shop-container {
+    width: 100%;
+    height: 300px;
+  }
+
+  .stats-container {
+    width: 100%;
+    height: max-content;
+  }
+}

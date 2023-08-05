@@ -1,0 +1,17 @@
+<div class="item" [class.disabled]="isDisabled" *ngIf="item">
+  <div class="tooltip" [class.visible]="tooltipVisible">
+    {{item.description}}
+  </div>
+  <button (mouseenter)="showTooltip()" (mouseleave)="hideTooltip()" (click)="clickHandler()">
+    <div *ngIf="isDisabled" class="coming-soon">{{ item.name }}</div>
+    <div class="content" *ngIf="!isDisabled">
+      <span class="name">{{ item.name }}</span>
+      <span class="cost">{{ convertNumber(item.cost) }}</span>
+      <span class="purchased">{{convertNumber(item.purchased)}}</span>
+    </div>
+  </button>
+</div>
+
+<ng-container *ngIf="item?.popUpContent && item?.showPopUp">
+  <app-popup [popUp]="item?.popUpContent"></app-popup>
+</ng-container>

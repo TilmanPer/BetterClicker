@@ -1,0 +1,22 @@
+<div class="stats">
+  <h2>{{gameService._cookiesText()}}</h2>
+  <h3>{{convertNumber(gameService._cookiesPerSecond())}}/s</h3>
+  <ul>
+    <li>
+      Cookies Per Click: <span>{{gameService._currentCookiesPerClick()}} x{{gameService._clickMultiplier().toFixed(1)}}</span>
+    </li>
+    <li>
+      Auto Clicker: <span>{{convertNumber(gameService._autoClickers())}}/{{(1/(1+gameService._autoClickerSpeed() /
+      100)).toFixed(2)}}s</span>
+    </li>
+    <li>
+      Sweet Spot Chance: <span>{{gameService._sweetSpotChance()}}%</span>
+    </li>
+    <li>
+      Sweet Spot Multiplier: <span>{{convertNumber(gameService._sweetSpotMultiplier())}}</span>
+    </li>
+    <li>
+      Max Combo: <span>{{gameService._maxCombo()}}</span>
+    </li>
+  </ul>
+</div>
