@@ -76,7 +76,6 @@ export class GameService {
 
     });
 
-
     this._upgrades = [
       new CookiesPerClick(this),
       new ClickMultiplier(this),
